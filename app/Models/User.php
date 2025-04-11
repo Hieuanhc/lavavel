@@ -24,6 +24,8 @@ class User extends Authenticatable
         'address',
         'password',
         //'confirm_password',
+        'diachi',
+        'tuoi',
     ];
 
     /**

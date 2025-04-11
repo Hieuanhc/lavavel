@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -19,7 +18,8 @@ return new class extends Migration
             $table->string('address', 255)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-           // $table->string('confirm_password');
+            // $table->string('confirm_password');
+
             $table->rememberToken();
             $table->timestamps();
         });
@@ -40,15 +40,17 @@ return new class extends Migration
         });
     }
 
+    // hhhh
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['phone', 'address']);  // Xóa cột phone và address khi rollback
-        });
-    
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->dropColumn(['phone', 'address']);  // Xóa cột phone và address khi rollback
+        // });
+
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');

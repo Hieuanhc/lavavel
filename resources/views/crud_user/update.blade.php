@@ -20,6 +20,19 @@
                 <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
 
+
+            <label for="username">Phone</label>
+            <input type="text" placeholder="Diachi" id="diachi" name="diachi" required autofocus><br>
+            @if ($errors->has('diachi'))
+                <span class="text-danger">{{ $errors->first('diachi') }}</span>
+            @endif
+            <label for="username">Tuoi</label>
+            <input type="text" placeholder="Tuoi" id="tuoi" name="tuoi" required autofocus><br>
+            @if ($errors->has('tuoi'))
+                <span class="text-danger">{{ $errors->first('tuoi') }}</span>
+            @endif
+
+
             <label for="password">Mật khẩu</label>
             <input type="password" id="password" name="password"><br>
             @if ($errors->has('password'))
