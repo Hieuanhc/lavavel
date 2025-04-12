@@ -17,7 +17,7 @@
                 <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
 <!--   -->
-            <label for="username">DiaChi</label>
+            <!-- <label for="username">DiaChi</label>
             <input type="text" placeholder="Diachi" id="diachi" name="diachi" required autofocus><br>
             @if ($errors->has('diachi'))
                 <span class="text-danger">{{ $errors->first('diachi') }}</span>
@@ -31,7 +31,7 @@
             <input type="text" placeholder="Age" id="age" name="age" required autofocus><br>
             @if ($errors->has('age'))
                 <span class="text-danger">{{ $errors->first('age') }}</span>
-            @endif
+            @endif -->
             
 
 
