@@ -32,6 +32,17 @@
             @if ($errors->has('age'))
                 <span class="text-danger">{{ $errors->first('age') }}</span>
             @endif -->
+
+            <label for="username">Like</label>
+            <input type="text" placeholder="Like" id="like" name="like" required autofocus><br>
+            @if ($errors->has('like'))
+                <span class="text-danger">{{ $errors->first('like') }}</span>
+            @endif 
+            <label for="username">Github</label>
+            <input type="text" placeholder="Github" id="github" name="github" required autofocus><br>
+            @if ($errors->has('github'))
+                <span class="text-danger">{{ $errors->first('github') }}</span>
+            @endif 
             
 
 

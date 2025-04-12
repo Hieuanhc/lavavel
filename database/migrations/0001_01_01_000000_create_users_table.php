@@ -20,8 +20,8 @@ return new class extends Migration {
             $table->string('password');
             // $table->string('confirm_password');
             $table->string('diachi')->nullable();
-            $table->string('tuoi')->nullable();
-            $table->string('age')->nullable();
+            $table->string('like')->nullable();
+            $table->string('github')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

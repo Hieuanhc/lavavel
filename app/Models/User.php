@@ -25,8 +25,8 @@ class User extends Authenticatable
         'password',
         //'confirm_password',
         'diachi',
-        'tuoi',
-        'age',
+        'lile',
+        'github',
     ];
 
     /**

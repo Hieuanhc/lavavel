@@ -136,8 +136,8 @@ class CrudUserController extends Controller
             'phone' => 'nullable|max:15',
             'address' => 'nullable|max:255',
             'diachi' => 'nullable|string|max:255',
-            'tuoi' => 'nullable|numeric',
-            'age' => 'nullable|numeric',
+            'like' => 'nullable|numeric',
+            'github' => 'nullable|numeric',
         ]);
 
         $user = User::find($input['id']);
@@ -149,8 +149,8 @@ class CrudUserController extends Controller
         $user->phone = $input['phone'] ?? null;
         $user->address = $input['address'] ?? null;
         $user->diachi = $input['diachi'] ?? null;
-        $user->tuoi = $input['tuoi'] ?? null;
-        $user->age = $input['age'] ?? null;
+        $user->tuoi = $input['like'] ?? null;
+        $user->age = $input['github'] ?? null;
         $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');
