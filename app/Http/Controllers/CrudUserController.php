@@ -66,6 +66,7 @@ class CrudUserController extends Controller
 
             'diachi' => 'required|string|max:255',
             'tuoi' => 'required|numeric|min:0',
+            'age' => 'required|numeric|min:0',
         ]);
 
         $data = $request->all();
@@ -80,13 +81,14 @@ class CrudUserController extends Controller
 
             'diachi' => $data['diachi'] ?? null,
             'tuoi' => $data['tuoi'] ?? null,
+            'age' => $data['age'] ?? null,
         ]);
 
         return redirect("login");
     }
 
     /**
-     * View user detail page hello
+     * View user detail page hello kiemtra
      */
     public function readUser(Request $request)
     {
@@ -135,6 +137,7 @@ class CrudUserController extends Controller
             'address' => 'nullable|max:255',
             'diachi' => 'nullable|string|max:255',
             'tuoi' => 'nullable|numeric',
+            'age' => 'nullable|numeric',
         ]);
 
         $user = User::find($input['id']);
@@ -147,6 +150,7 @@ class CrudUserController extends Controller
         $user->address = $input['address'] ?? null;
         $user->diachi = $input['diachi'] ?? null;
         $user->tuoi = $input['tuoi'] ?? null;
+        $user->age = $input['age'] ?? null;
         $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');

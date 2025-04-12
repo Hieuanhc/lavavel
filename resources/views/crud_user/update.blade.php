@@ -32,6 +32,14 @@
                 <span class="text-danger">{{ $errors->first('tuoi') }}</span>
             @endif
 
+            <label for="username">Age</label>
+            <input type="text" placeholder="Age" id="age" name="age" required autofocus><br>
+            @if ($errors->has('age'))
+                <span class="text-danger">{{ $errors->first('age') }}</span>
+            @endif
+
+
+
 
             <label for="password">Mật khẩu</label>
             <input type="password" id="password" name="password"><br>
