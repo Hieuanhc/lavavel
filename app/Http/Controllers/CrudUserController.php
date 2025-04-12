@@ -61,12 +61,12 @@ class CrudUserController extends Controller
             'password' => 'required|min:6',
             //------//
             //'confirm_password' => 'required|min:6',
-            'phone' => 'nullable|max:15',
-            'address' => 'nullable|max:255',
+            // 'phone' => 'nullable|max:15',
+            // 'address' => 'nullable|max:255',
 
-            'diachi' => 'required|string|max:255',
-            'tuoi' => 'required|numeric|min:0',
-            'age' => 'required|numeric|min:0',
+           
+            'like' => 'required|numeric|min:0',
+            'github' => 'required|numeric|min:0',
         ]);
 
         $data = $request->all();
@@ -76,12 +76,10 @@ class CrudUserController extends Controller
             'password' => Hash::make($data['password']),
             //
             //'confirm_password' => Hash::make($data['password']),
-            'phone' => $data['phone'] ?? null,
-            'address' => $data['address'] ?? null,
-
-            'diachi' => $data['diachi'] ?? null,
-            'tuoi' => $data['tuoi'] ?? null,
-            'age' => $data['age'] ?? null,
+            // 'phone' => $data['phone'] ?? null,
+            // 'address' => $data['address'] ?? null,
+            'like' => $data['like'] ?? null,
+            'github' => $data['github'] ?? null,
         ]);
 
         return redirect("login");
@@ -133,11 +131,11 @@ class CrudUserController extends Controller
             'password' => 'required|min:6',
             //
             //'confirm_password' => 'required|min:6',
-            'phone' => 'nullable|max:15',
-            'address' => 'nullable|max:255',
+            // 'phone' => 'nullable|max:15',
+            // 'address' => 'nullable|max:255',
             'diachi' => 'nullable|string|max:255',
-            'like' => 'nullable|numeric',
-            'github' => 'nullable|numeric',
+            'like' => 'nullable|string|max:255',
+            'github' => 'nullable|string|max:255',
         ]);
 
         $user = User::find($input['id']);
@@ -146,11 +144,11 @@ class CrudUserController extends Controller
         $user->password = $input['password'];
         ///
         //$user->password = $input['confirm_password'];
-        $user->phone = $input['phone'] ?? null;
-        $user->address = $input['address'] ?? null;
-        $user->diachi = $input['diachi'] ?? null;
-        $user->tuoi = $input['like'] ?? null;
-        $user->age = $input['github'] ?? null;
+       // $user->like = $input['phone'] ?? null;
+        // $user->address = $input['address'] ?? null;
+        // $user->diachi = $input['diachi'] ?? null;
+        $user->like = $input['like'] ?? null;
+        $user->github = $input['github'] ?? null;
         $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');

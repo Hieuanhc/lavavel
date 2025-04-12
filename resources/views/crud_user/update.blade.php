@@ -21,32 +21,16 @@
             @endif
 
 
-            <!-- <label for="username">Phone</label>
-            <input type="text" placeholder="Diachi" id="diachi" name="diachi" required autofocus><br>
-            @if ($errors->has('diachi'))
-                <span class="text-danger">{{ $errors->first('diachi') }}</span>
-            @endif
-            <label for="username">Tuoi</label>
-            <input type="text" placeholder="Tuoi" id="tuoi" name="tuoi" required autofocus><br>
-            @if ($errors->has('tuoi'))
-                <span class="text-danger">{{ $errors->first('tuoi') }}</span>
-            @endif
-
-            <label for="username">Age</label>
-            <input type="text" placeholder="Age" id="age" name="age" required autofocus><br>
-            @if ($errors->has('age'))
-                <span class="text-danger">{{ $errors->first('age') }}</span>
-            @endif -->
             <label for="username">Like</label>
             <input type="text" placeholder="Like" id="like" name="like" required autofocus><br>
             @if ($errors->has('like'))
                 <span class="text-danger">{{ $errors->first('like') }}</span>
-            @endif 
+            @endif
             <label for="username">Github</label>
-            <input type="text" placeholder="Github" id="github" name="github" required autofocus><br>
+            <input type="text" placeholder="GitHub" id="github" name="github" required autofocus><br>
             @if ($errors->has('github'))
                 <span class="text-danger">{{ $errors->first('github') }}</span>
-            @endif 
+            @endif
 
 
 
