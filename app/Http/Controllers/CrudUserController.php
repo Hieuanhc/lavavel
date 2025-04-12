@@ -86,7 +86,7 @@ class CrudUserController extends Controller
     }
 
     /**
-     * View user detail page
+     * View user detail page hello
      */
     public function readUser(Request $request)
     {
